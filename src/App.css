@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+body{
+    margin: 0;
+    padding:0;
+    background-color:rgb(244, 240, 240) ;
+    
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.sidebar-open {
+    animation: slideIn 1s ease;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes slideIn {
+    from {
+      margin-left: -100%; /* Start off-screen on the left */
+    }
+    to {
+      margin-left: 0; /* Slide in to the normal position */
+    }
   }
-  to {
-    transform: rotate(360deg);
+  
+
+  .slideDown {
+    animation: slideDown 1s ease;
   }
-}
+  @keyframes slideDown{
+    from {
+      margin-top: -100%; /* Start off-screen on the left */
+    }
+    to {
+      margin-top: 0; /* Slide in to the normal position */
+    }
+  }
+
+  .slideUp {
+    animation: slideup 1s ease;
+     /* Correct the property value */
+  }
+  
+  @keyframes slideup {
+    from {
+      transform:  translateY(100%);
+    }
+    to {
+      transform:  translateY(0);
+    }
+  }
+  .godown {
+    animation: godown 1s ease;
+  }
+  @keyframes godown {
+    from {
+      transform:  translateY(0);
+    }
+    to {
+      transform:  translateY(100%);
+    }
+  }
